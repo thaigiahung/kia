@@ -134,14 +134,14 @@ var Header = React.createClass({
 			return (
 					<div>
 						<CSSTransitionGroup transitionName="moveDown">							
-							<div key="header" className="body-background">
+							<div key="header1" className="body-background">
 								<div className="header">
 									<div className="header-left" onClick={this.onClick.bind(this,1)}><img src="images/icon_navigation.png" /></div>									
 									<div className="header-center"><h1>SẢN PHẨM</h1></div>
 									<div className="header-right" onClick={this.onClick.bind(this,3)}><img src="images/icon_promotion.png" /></div>										
 								</div>
 								<div className="container-back">
-									<ProductionList products={PRODUCTS} />
+									<ProductionList products={PRODUCTS} callback={this.callback}/>
 								</div>
 							</div>							
 						</CSSTransitionGroup>
@@ -152,16 +152,16 @@ var Header = React.createClass({
 });
 
 var PRODUCTS = [
-  {group: '----------- Cars -----------', img:'images/production-list/thumb-k3-off.gif'},
-  {group: '----------- Cars -----------', img:'images/production-list/thumb-Koup-off.gif'},
-  {group: '----------- Cars -----------', img:'images/production-list/thumb-morning-off.gif'},
-  {group: '----------- Cars -----------', img:'images/production-list/thumb-rio5door-off.gif'},
-  {group: '----------- SUV & MPV -----------', img:'images/production-list/thumb-k3-off.gif'},
-  {group: '----------- SUV & MPV -----------', img:'images/production-list/thumb-Koup-off.gif'}
+  {id: '1', group: '----------- Cars -----------', img:'images/production-list/thumb-k3-off.gif'},
+  {id: '2', group: '----------- Cars -----------', img:'images/production-list/thumb-Koup-off.gif'},
+  {id: '3', group: '----------- Cars -----------', img:'images/production-list/thumb-morning-off.gif'},
+  {id: '4', group: '----------- Cars -----------', img:'images/production-list/thumb-rio5door-off.gif'},
+  {id: '5', group: '----------- SUV & MPV -----------', img:'images/production-list/thumb-k3-off.gif'},
+  {id: '6', group: '----------- SUV & MPV -----------', img:'images/production-list/thumb-Koup-off.gif'}
 ];
 
 var MENU = [
-  {id: '2', img:'images/menu-item-logo.png' ,name: 'SẢN PHẨM'},
+  {id: '7', img:'images/menu-item-logo.png' ,name: 'SẢN PHẨM'},
   {id: '3', img:'images/menu-item-logo.png' ,name: 'ƯU ĐÃI'},
   {id: '4', img:'images/menu-item-logo.png' ,name: 'BẢNG GIÁ'},
   {id: '5', img:'images/menu-item-logo.png' ,name: 'HỆ THỐNG PHÂN PHỐI'},
